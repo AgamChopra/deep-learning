@@ -1,4 +1,4 @@
-# Agam Chopra's Deep Learning and more
+# Agam Chopra's Deep Learning and Data Science repository
 
 ## What is the Deep Learning repository about?
 
