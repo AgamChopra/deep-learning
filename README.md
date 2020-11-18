@@ -1,13 +1,13 @@
 # Deep Learning
 ["Deep learning is a class of machine learning algorithms that uses multiple layers to progressively extract higher-level features from the raw input. For example, in image processing, lower layers may identify edges, while higher layers may identify the concepts relevant to a human such as digits or letters or faces."](https://en.wikipedia.org/wiki/Deep_learning)
 
-This repo is a collection of all my publicaly available deep learning projects. Please feel free to fork and code up your own versions of code.
+This repo is a collection of all my publicly available Deep Learning projects. Please feel free to fork and program your versions of the code.
 
-[Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to quickly gain intuition about deep learning.
+[Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
 
   ![network](http://neuralnetworksanddeeplearning.com/images/tikz41.png)
 
-I also recomment taking the [deep learning certification by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
+I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
 ## Projects:
 
@@ -15,7 +15,7 @@ I also recomment taking the [deep learning certification by Andrew Ng on Courser
 
   ![learning decision boundry](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
-* I have created a visualization of all the activation functions and their first derivatives using desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
+* I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
 ![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
  
