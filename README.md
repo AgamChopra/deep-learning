@@ -16,6 +16,7 @@ I also recomment taking the [deep learning certification by Andrew Ng on Courser
 
   ![learning decision boundry](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
+* I have created a visualization of all the activation functions and their first derivatives using desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
  
 ## Skills Utilized
 In this project, I utilized the following skills: 
