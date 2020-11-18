@@ -9,8 +9,6 @@ This repo is a collection of all my publicaly available deep learning projects. 
 
 I also recomment taking the [deep learning certification by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
-![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
-
 ## Projects:
 
 * [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor)
@@ -18,6 +16,8 @@ I also recomment taking the [deep learning certification by Andrew Ng on Courser
   ![learning decision boundry](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
 * I have created a visualization of all the activation functions and their first derivatives using desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
+
+![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
  
 ## Skills Utilized
 In this project, I utilized the following skills: 
