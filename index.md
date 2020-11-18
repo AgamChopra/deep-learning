@@ -1,4 +1,4 @@
-![Agam Chopra](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/agam-graduation-purdue-2020-small.png?raw=true)
+![Agam Chopra](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/classification-ANN-example.png?raw=true)
 
 # Agam Chopra's Deep Learning and Data Science repository
 
