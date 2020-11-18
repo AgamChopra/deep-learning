@@ -6,12 +6,6 @@
 
 This repo is a collection of all my publicly available Deep Learning projects. Please feel free to fork and program your versions of the code.
 
-[Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
-
-  ![network](http://neuralnetworksanddeeplearning.com/images/tikz41.png)
-
-I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
-
 ## Projects in this repository
 
 * [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor)
@@ -41,6 +35,11 @@ In this project, I utilized the following skills:
 
 * [Random initialization](https://towardsdatascience.com/weight-initialization-techniques-in-neural-networks-26c649eb3b78)
 
+### Useful resources:
+
+* [Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
+
+* I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
 ## License
 
