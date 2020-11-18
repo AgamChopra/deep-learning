@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+# Agam Chopra's Deep Learning and more
 
-You can use the [editor on GitHub](https://github.com/AgamChopra/deep-learning/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## What is the Deep Learning repository about?
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+["Deep learning is a class of machine learning algorithms that uses multiple layers to progressively extract higher-level features from the raw input. For example, in image processing, lower layers may identify edges, while higher layers may identify the concepts relevant to a human such as digits or letters or faces."](https://en.wikipedia.org/wiki/Deep_learning)
 
-### Markdown
+This repo is a collection of all my publicly available Deep Learning projects. Please feel free to fork and program your versions of the code.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
 
-```markdown
-Syntax highlighted code block
+  ![network](http://neuralnetworksanddeeplearning.com/images/tikz41.png)
 
-# Header 1
-## Header 2
-### Header 3
+I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
-- Bulleted
-- List
+## Projects in this repository
 
-1. Numbered
-2. List
+* [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor)
 
-**Bold** and _Italic_ and `Code` text
+  ![learning decision boundry](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
-[Link](url) and ![Image](src)
-```
+* I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
+ 
+## Skills Utilized
+In this project, I utilized the following skills: 
 
-### Jekyll Themes
+* [ADAM optimization](https://arxiv.org/pdf/1412.6980.pdf)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AgamChopra/deep-learning/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+* [Learning rate decay](https://arxiv.org/pdf/1908.01878.pdf)
 
-### Support or Contact
+* [Input normalization](https://towardsdatascience.com/why-data-should-be-normalized-before-training-a-neural-network-c626b7f66c7d)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* [Swish over LeakyReLU](https://arxiv.org/pdf/1710.05941.pdf)[ activation function](https://arxiv.org/pdf/1901.02671.pdf)
+
+* [Vectorization](https://towardsdatascience.com/what-is-vectorization-in-machine-learning-6c7be3e4440a)
+
+* [Data Visualization](https://towardsdatascience.com/introduction-to-data-visualization-in-python-89a54c97fbed)
+
+* [Decision threshold optimization](https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/)
+
+* [Random initialization](https://towardsdatascience.com/weight-initialization-techniques-in-neural-networks-26c649eb3b78)
+
+
+## License
+
+**[The MIT License](https://choosealicense.com/licenses/mit/)**
