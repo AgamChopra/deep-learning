@@ -1,5 +1,5 @@
 # Simple Stock Performance
-Simple Stock Performance Predictor is a deep learning model developed to predict whether one should invest and hold a given stock for a year or not generate profit.
+Simple Stock Performance Predictor is a deep learning model developed to predict whether one should invest and hold a given stock for a year or not for profit.
 
 ![cost](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/cost.png?raw=true)
 
