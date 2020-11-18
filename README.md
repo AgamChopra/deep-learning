@@ -1,5 +1,14 @@
 # Deep Learning
+["Deep learning is a class of machine learning algorithms that uses multiple layers to progressively extract higher-level features from the raw input. For example, in image processing, lower layers may identify edges, while higher layers may identify the concepts relevant to a human such as digits or letters or faces."](https://en.wikipedia.org/wiki/Deep_learning)
+
 This repo is a collection of all my publicaly available deep learning projects. Please feel free to fork and code up your own versions of code.
+
+[Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to quickly gain intuition about deep learning.
+
+  ![network](http://neuralnetworksanddeeplearning.com/images/tikz41.png)
+
+I also recomment taking the [deep learning certification by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
+
 
 ## Projects:
 
