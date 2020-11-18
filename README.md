@@ -9,6 +9,7 @@ This repo is a collection of all my publicaly available deep learning projects. 
 
 I also recomment taking the [deep learning certification by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
+![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
 
 ## Projects:
 
