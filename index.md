@@ -16,7 +16,7 @@ This repo is a collection of all my publicly available Deep Learning projects. P
 
 * [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor)
 
-  ![SSP](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/classification-ANN-example.png?raw=true)
+  ![SSP](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
 * I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
