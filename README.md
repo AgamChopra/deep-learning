@@ -18,6 +18,10 @@ I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on 
 * I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
 ![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
+
+* [X-Ray Pneumonia diagnostic CNN](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN)
+
+  ![XrPdCNN](https://github.com/AgamChopra/deep-learning/raw/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
  
 ## Skills Utilized
 In this project, I utilized the following skills: 
