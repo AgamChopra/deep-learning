@@ -10,9 +10,13 @@ This repo is a collection of all my publicly available Deep Learning projects. P
 
 ## Projects in this repository
 
+* [X-Ray Pneumonia diagnostic CNN](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN)
+
+  ![XrPdCNN](https://github.com/AgamChopra/deep-learning/raw/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
+
 * [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor)
 
-  ![learning decision boundry](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
+  ![SSP](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/classification-ANN-example.png?raw=true)
 
 * I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
