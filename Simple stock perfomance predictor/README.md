@@ -1,7 +1,7 @@
 # Simple Stock Performance
 Simple Stock Performance Predictor is a deep learning model developed to predict whether one should invest and hold a given stock for a year or not for profit.
 
-![cost](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/cost.png?raw=true)
+[Click here](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/prediction/Agamdeep_Chopra_Course_Project.pdf)to read a brief report for this project.
 
 ## Disclosure
 This is my first attempt to make a deep learning algorithm in python using NumPy.
@@ -9,7 +9,7 @@ As part of my MBA program at Stevens Institute of Technology, I developed this m
 
 I utilized a simplified and idealized data set to show that ANN can be used to predict future stock performance based on financial indicators from tax returns, the economy, and the happiness index of a country.
 
-**Please note that this is a simple model to achieve my class's data analysis requirements only and should not be used to infer anything about the real world. Real data is noisy and very hard to model and this model simply will not work in a real-world scenario due to hardware and algorithm limitations.**
+**Please note that this is a simple model to ONLY achieve my class's data analysis requirements. It is my recommendation that further research be done before utilizing similar models for real world applications.**
  
 ## Skills Utilized
 In this project, I utilized the following skills: 
