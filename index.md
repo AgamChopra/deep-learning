@@ -15,6 +15,8 @@ This repo is a collection of all my publicly available Deep Learning projects. P
   ![XrPdCNN](https://github.com/AgamChopra/deep-learning/raw/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
 
 * [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor)
+  
+  [Click here](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/result/Agamdeep_Chopra_Course_Project.pdf) to read a brief report for this project.
 
   ![SSP](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
