@@ -15,13 +15,14 @@ I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on 
 
   ![learning decision boundry](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
+* [X-Ray Pneumonia diagnostic CNN](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN)
+
+  ![XrPdCNN](https://github.com/AgamChopra/deep-learning/raw/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
+
 * I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
 ![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
 
-* [X-Ray Pneumonia diagnostic CNN](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN)
-
-  ![XrPdCNN](https://github.com/AgamChopra/deep-learning/raw/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
  
 ## Skills Utilized
 In this project, I utilized the following skills: 
