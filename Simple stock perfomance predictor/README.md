@@ -34,8 +34,6 @@ In this project, I utilized the following skills:
   
 ![accuracy](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/accuracy.png?raw=true)
 
-![p out](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/model_p_output.png?raw=true)
-
 ![learning decision boundry](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/train_decision.png?raw=true)
 
 ![test output](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/img/test_decision.png?raw=true)
