@@ -46,4 +46,4 @@ In this project, I utilized the following skills:
 
 ## License
 
-**[The MIT License](https://github.com/AgamChopra/deep-learning/blob/master/LICENSE.md)**
+**[The MIT License*](https://github.com/AgamChopra/deep-learning/blob/master/LICENSE.md)**
