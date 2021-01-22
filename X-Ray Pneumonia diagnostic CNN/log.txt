@@ -375,6 +375,64 @@ fc3 (Dense)                     (None, 3)            301059      flatten[0][0]
 Total params: 23,882,499
 Trainable params: 23,829,379
 Non-trainable params: 53,120
+
+Training...
 __________________________________________________________________________________________________
 Epoch 1/5
-218/218 [==============================] - 5650s 26s/step - loss: 0.5653 - accuracy: 0.9870
+218/218 [==============================] - 5739s 26s/step - loss: 3.1242 - accuracy: 0.9254
+Epoch 2/5
+218/218 [==============================] - 5679s 26s/step - loss: 4.0201e-06 - accuracy: 1.0000
+Epoch 3/5
+218/218 [==============================] - 5670s 26s/step - loss: 7.9458e-07 - accuracy: 1.0000
+Epoch 4/5
+218/218 [==============================] - 5637s 26s/step - loss: 1.3601e-07 - accuracy: 1.0000
+Epoch 5/5
+218/218 [==============================] - 5631s 26s/step - loss: 1.1128e-05 - accuracy: 1.0000
+
+Testing...
+
+20/20 [==============================] - 77s 4s/step - loss: 0.0000e+00 - accuracy: 1.0000
+
+Loss = 0.0
+Test Accuracy = 1.0
+
+Validating...
+
+21/21 [==============================] - 85s 4s/step - loss: 0.2522 - accuracy: 0.9829
+
+Loss = 0.25224587321281433
+Test Accuracy = 0.9828926920890808
+
+
+Figures now render in the Plots pane by default. To make them also appear inline in the Console, uncheck "Mute Inline Plotting" under the Plots pane options menu. 
+
+Model prediction:
+ [[1. 0. 0.]
+ [0. 0. 1.]
+ [0. 1. 0.]
+ [1. 0. 0.]
+ [0. 0. 1.]] ...
+
+Expected:
+ [[1. 0. 0.]
+ [0. 0. 1.]
+ [0. 1. 0.]
+ [1. 0. 0.]
+ [0. 0. 1.]] ...
+
+Decoded Predictions:
+
+NORMAL
+True
+
+VIRAL PNEUMONIA
+True
+
+BACTERIAL PNEUMONIA
+True
+
+NORMAL
+True
+
+VIRAL PNEUMONIA
+True
