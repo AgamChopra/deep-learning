@@ -1,5 +1,6 @@
 # X-Ray Pneumonia diagnostic CNN
-The goal of this project is to develop a CNN that can accurately diagnose a patient with pneumonia and the type namely viral or bacterial by analyzing the patient’s chest X-ray image.
+The goal of this project is to develop a Convolutional neural network that can accurately diagnose a patient with Pneumonia and the type of Pneumonia(viral or bacterial) by analyzing the patient’s chest X-ray image.
+
 Update: ResNet50 architecture gave test accuracy of 1.00 and Val accuracy of 0.98.
 
 ![cost](https://github.com/AgamChopra/deep-learning/blob/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
