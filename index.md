@@ -10,11 +10,11 @@ This repo is a collection of all my publicly available Deep Learning projects. P
 
 ## Projects in this repository
 
-* [X-Ray Pneumonia diagnostic CNN](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN)
+* [X-Ray Pneumonia diagnostic CNN](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN) The goal of this project is to develop a Convolutional neural network that can accurately diagnose a patient with Pneumonia and the type of Pneumonia(viral or bacterial) by analyzing the patient’s chest X-ray image. ResNet50 architecture gave test accuracy of 1.00 and Val accuracy of 0.98.
 
   ![XrPdCNN](https://github.com/AgamChopra/deep-learning/raw/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
 
-* [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor)
+* [Simple Stock Perfomance](https://github.com/AgamChopra/deep-learning/tree/master/Simple%20stock%20perfomance%20predictor) Predictor is a deep learning model developed to predict whether one should invest and hold a given stock for a year or not for profit.
   
   [Click here](https://github.com/AgamChopra/deep-learning/blob/master/Simple%20stock%20perfomance%20predictor/result/Agamdeep_Chopra_Course_Project.pdf) to read a brief report for this project.
 
@@ -22,10 +22,13 @@ This repo is a collection of all my publicly available Deep Learning projects. P
 
 * I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
-![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true)
- 
-## Skills Utilized
-In this project, I utilized the following skills: 
+![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true) 
+
+### Useful resources:
+
+* [Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
+
+* I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
 * [ADAM optimization](https://arxiv.org/pdf/1412.6980.pdf)
 
@@ -42,12 +45,6 @@ In this project, I utilized the following skills:
 * [Decision threshold optimization](https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/)
 
 * [Random initialization](https://towardsdatascience.com/weight-initialization-techniques-in-neural-networks-26c649eb3b78)
-
-### Useful resources:
-
-* [Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
-
-* I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
 ## License
 
