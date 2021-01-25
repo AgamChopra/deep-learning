@@ -5,8 +5,6 @@ This repository is a collection of all my publicly available Deep Learning proje
 
 [Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
 
-  ![network](http://neuralnetworksanddeeplearning.com/images/tikz41.png)
-
 I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)
 
 ## Projects:
