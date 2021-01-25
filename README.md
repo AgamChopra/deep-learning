@@ -11,6 +11,10 @@ I also recommend enrolling in the [Deep Learning Specialization by Andrew Ng on 
 
 ## Projects:
 
+* [Embryo Classification Fully Convolutional Neural Network](https://github.com/AgamChopra/deep-learning/tree/master/Embryo%20Classification)
+
+  ![EmbryoCNN]()
+  
 * [X-Ray Pneumonia diagnostic Convolutional Neural Network](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN)
 
   ![XrPdCNN](https://github.com/AgamChopra/deep-learning/raw/master/X-Ray%20Pneumonia%20diagnostic%20CNN/img/pnyn.png?raw=true)
