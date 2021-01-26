@@ -26,8 +26,6 @@ This repo is a collection of all my publicly available Deep Learning projects. P
 
 * I have created a visualization of all the activation functions and their first derivatives that I am familiar with using the Desmos graphing tool [click here](https://www.desmos.com/calculator/altncvpktu).
 
-![network](https://github.com/AgamChopra/deep-learning/blob/master/assets/img/desmos_activation.jpg?raw=true) 
-
 ### Useful resources:
 
 * [Neural Networks and Deep Learning by Michael Nielson](http://neuralnetworksanddeeplearning.com/index.html) is a free online book and a great resource to gain intuition about Deep Learning.
