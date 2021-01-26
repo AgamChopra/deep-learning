@@ -12,7 +12,7 @@ This repo is a collection of all my publicly available Deep Learning projects. P
 
 * [Fully Convolutional Neural Network for Embryo Classification](https://github.com/AgamChopra/deep-learning/tree/master/Embryo%20Classification) The goal of this project is to correctly classify embryo viability based on a 2D microscope image of the embryo.
 
-  ![EmbryoCNN]()
+  ![Embryo CNN](https://github.com/AgamChopra/deep-learning/blob/master/Embryo%20Classification/assets/Embryo%20Grading.png?raw=true)
 
 * [X-Ray Pneumonia diagnostic Convolutional Neural Network](https://github.com/AgamChopra/deep-learning/tree/master/X-Ray%20Pneumonia%20diagnostic%20CNN) A Convolutional neural network was developed that analyzes a patient’s chest X-ray image to give an accurate Pneumonia diagnosis and the type of Pneumonia (viral or bacterial) if applicable. ResNet50 architecture gave test accuracy of 1.00 and Val accuracy of 0.98.
 
