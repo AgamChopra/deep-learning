@@ -1,11 +1,11 @@
 # ©[2021][Agamdeep Chopra]
 # Feel free to use this code for learning purposes but please properly credit me in APA format.
-# Example 1, Perceptron Binary Inverter
-# Suppliment to my Introdution to Deep Learning Video 1
-# (A simple binary inverter using a perceptron logic.)
-# Again, as mentioned in the video, this code can easily be outperfomed-
-# by a simple inversion logic. The goal of this project is to give a-
-# a gentle introduction to ML.
+	# Example 1, Perceptron Binary Inverter
+	# Suppliment to my Introduction to Deep Learning Video 1
+	# (A simple binary inverter using a perceptron logic.)
+	# Again, as mentioned in the video, this code can easily be outperformed-
+	# by a simple inversion logic. The goal of this project is to give a-
+	# a gentle introduction to ML.
 
 #import these files
 #uncomment the pip commands and run them if numpy or matplotlib are not correctly installed.
@@ -34,7 +34,7 @@ def percp_parm():
 def loss(yp,ye):
     return (np.square(ye-yp))
 
-#We sont have any need to use cost for this example but just to give an example.
+#Average the losses and divide by 2 to get cost. Dont worry about the 1/2 factor for now. Vola! You have Mean Square Error!
 def cost(yp,ye):
     return (np.mean(loss(yp,ye))/2)
 
