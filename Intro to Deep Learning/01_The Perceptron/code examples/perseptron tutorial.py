@@ -17,7 +17,7 @@ from matplotlib import pyplot as plt
 #%%
 #Define the hyperparameters
 η = 0.001 #learning rate. Dont worry aboput this for now.
-ζ = 1E-9 #very small value constant. Dont worry aboput this for now.
+ε = 1E-9 #very small value constant. Dont worry aboput this for now.
 
 #Define the inputs and ground truth values(expected outputs)
 X = np.array((1,0)) # input
@@ -27,7 +27,6 @@ Y_exp = np.array((0,1)) # expected output
 def percp_parm():
     w = np.random.randn((1)) #initialize weight value of perseptron to some random value. Dont worry about this for now.
     b = np.zeros((1))  #initialize bias value of perseptron as zero. Dont worry about this for now.
-    print(w,b)
     return (w,b)
 
 #Define the loss. Dont worry about loss or cost functions. 
@@ -36,8 +35,8 @@ def loss(yp,ye):
     return (np.square(ye-yp))
 
 #We sont have any need to use cost for this example but just to give an example.
-def cost(losses):
-    return (np.mean(losses))
+def cost(yp,ye):
+    return (np.mean(loss(yp,ye))/2)
 
 #Activation function (non-linear part of the perceptron)
 def sigmoid(x):
@@ -60,13 +59,13 @@ def bprop(η,x,yp,ye,w,b):
 
 #Calculate the Δ values using chain rule on Loss J and partial derivatives.
 def diff(x,yp,ye,w,b):
-    Δw = ((loss(yp+ζ,ye)-loss(yp-ζ,ye))/(2*ζ))*((fprop(x,w+ζ,b)-fprop(x,w-ζ,b))/(2*ζ))
+    Δw = ((cost(yp+ε,ye)-cost(yp-ε,ye))/(2*ε))*((fprop(x,w+ε,b)-fprop(x,w-ε,b))/(2*ε))
     # Δw <- ∂J/∂w = (∂J/∂y)(∂y/∂w)
-    #             = ((J(y+ζ)-J(y-ζ))/2ζ)*((y(w+ζ)-y(w-ζ))/2ζ) {where y = actiation(linear(x,w,b))
+    #             = ((J(y+ε)-J(y-ε))/2ε)*((y(w+ε)-y(w-ε))/2ε) {where y = actiation(linear(x,w,b))
     #                                                                J = Loss(y,y_exp)           }
-    Δb = ((loss(yp+ζ,ye)-loss(yp-ζ,ye))/(2*ζ))*((fprop(x,w,b+ζ)-fprop(x,w,b-ζ))/(2*ζ))
+    Δb = ((cost(yp+ε,ye)-cost(yp-ε,ye))/(2*ε))*((fprop(x,w,b+ε)-fprop(x,w,b-ε))/(2*ε))
     # Δb <- ∂J/∂b = (∂J/∂y)(∂y/∂b)
-    #             = ((J(y+ζ)-J(y-ζ))/2ζ)*((y(b+ζ)-y(b-ζ))/2ζ) {where y = actiation(linear(x,w,b))
+    #             = ((J(y+ε)-J(y-ε))/2ε)*((y(b+ε)-y(b-ε))/2ε) {where y = actiation(linear(x,w,b))
     #                                                                J = Loss(y,y_exp)           }
     return (Δw,Δb)
 
@@ -74,20 +73,18 @@ def diff(x,yp,ye,w,b):
 #Epoch is the number of times we want to run the model with backprop to minimize J.
 def perceptron(x,ye,epoch=100): 
     w,b = percp_parm() #initializing the parameters
-    ls = 0
+    ls = []
+    list_index = 0
     for i in range(epoch):#loop to minimize J.
-        ls = 0
-        for j in range(len(x)):#Usually this can ve done in a single step using the-
-                               #vectorization properties of numpy unless using minibatches,-
-                               #in which case it will be a combination of both.
-            yp = fprop(x[j], w, b)#the forward step to calculate the output
-            w,b = bprop(η, x[j], yp, ye[j], w, b)#update the parameters.
-            #loss calculation for visualization. Dont worry about the next 4 lines.
-            ls = ls+loss(yp, ye[j])
-            if i%5000 == 0 and j == 1:
-                print(ls/2)
-    print(ls/2)
-    return w,b
+        #Using vectorization properties of numpy:
+        yp = fprop(x, w, b)#the forward step to calculate the output
+        w,b = bprop(η, x, yp, ye, w, b)#update the parameters.
+        #loss calculation for visualization. Dont worry about the next 3 lines
+        if i%500 == 0:
+            ls.append(cost(yp, ye))
+            print(ls[list_index])
+            list_index += 1
+    return w,b,ls
 #%%
 #Finally! We are all set!
 #Lets try running the model.
@@ -102,7 +99,7 @@ def perceptron(x,ye,epoch=100):
 #if x = 0 then y_pred =  [1.]  with value [0.89797664]  at threshold 0.5
 #if x = 1 then y_pred =  [0.]  with value [0.08212868]  at threshold 0.5
 #here, as long as our model spits out a value larger than 1, we say that the prediction is 1 and vice versa.
-w,b = perceptron(X, Y_exp,epoch = 100000) 
+w,b = perceptron(X, Y_exp,epoch = 10000) 
 print("optimized weight = ",w," and bias = ",b)
 #testing the solution
 print("if x = 0 then y_pred = ",np.around(fprop(0, w, b))," with value",fprop(0, w, b)," at threshold 0.5")
