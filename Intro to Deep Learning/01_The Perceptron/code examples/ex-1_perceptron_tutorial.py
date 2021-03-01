@@ -1,4 +1,4 @@
-# Â©[2021][Agamdeep Chopra]
+# ©[2021][Agamdeep Chopra]
 # Feel free to use this code for learning purposes but please properly credit me in APA format.
 	# Example 1, Perceptron Binary Inverter
 	# Suppliment to my Introduction to Deep Learning Video 1

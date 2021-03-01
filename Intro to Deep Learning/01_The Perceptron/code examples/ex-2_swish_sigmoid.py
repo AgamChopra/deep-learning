@@ -1,3 +1,6 @@
+# ©[2021][Agamdeep Chopra]
+# Feel free to use this code for learning purposes but please properly credit me in APA format.
+
 import numpy as np
 from matplotlib import pyplot as plt
 
