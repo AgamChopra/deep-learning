@@ -59,7 +59,6 @@ def perceptron(x,ye,epoch=100):
     w1,b1 = percp_parm()
     w2,b2 = percp_parm()
     ls = []
-    ac = []
     list_index = 0
     x = norm_input(x) # Normalizing the input. This is done to prevent exploding or vanishing gradients.
     for i in range(epoch):
@@ -70,14 +69,13 @@ def perceptron(x,ye,epoch=100):
                 ls.append(loss(yp, ye[j]))
                 print("Epoch:",i," Loss:", ls[list_index])
                 list_index += 1
-    return w2,b2,w1,b1,ls,ac
+    return w2,b2,w1,b1,ls
 #%%
 #Run the following:
 np.random.seed(seed=65)
-w2,b2,w1,b1,J,ac = perceptron(X, Y_exp,epoch = 400)
+w2,b2,w1,b1,J = perceptron(X, Y_exp,epoch = 400)
 print("optimized weight[2,1] = ",w2,w1," and bias[2,1] = ",b2,b1)
 plt.plot(J, color='red',linewidth=1,label = "Loss")
-plt.plot(ac, color='gray',linewidth=1,label = "Accuracy")
 plt.xlabel('Epoch x20')
 plt.ylabel('Loss')
 plt.title('(Swish->Sigmoid)')
