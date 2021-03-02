@@ -1,4 +1,4 @@
-# ©[2021][Agamdeep Chopra]
+# Â©[2021][Agamdeep Chopra]
 # Feel free to use this code for learning purposes but please properly credit me in APA format.
 
 import numpy as np
@@ -7,9 +7,14 @@ from matplotlib import pyplot as plt
 alpha = 0.0008
 epsilon = 1E-9
 
-X = np.array((166,177,190,178,148,159,214,165,186,196,168,171,217,191.204,222,213,276,213,193,212,229,215,260,258,266,331)) # input
-X = X/np.linalg.norm(X)
-Y_exp = np.array((0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,1,1,1,0,1,1,1,1,1,1,1)) # expected output
+X = np.random.rand(1000)*400 # input
+Y_exp = np.zeros((X.shape))
+for i in range(len(X)):
+    Y_exp[i] = X[i]>200       # expected output
+
+def norm_input(X):
+    X = (X-np.min(X))/(np.max(X)-np.min(X))
+    return X
 
 def percp_parm():
     w = np.random.randn((1))
@@ -54,63 +59,77 @@ def perceptron(x,ye,epoch=100):
     w1,b1 = percp_parm()
     w2,b2 = percp_parm()
     ls = []
+    ac = []
     list_index = 0
+    x = norm_input(x) # Normalizing the input. This is done to prevent exploding or vanishing gradients.
     for i in range(epoch):
         for j in range(len(x)):
             yp = fprop(x[j], w2, b2, w1, b1)
             w2,b2,w1,b1 = bprop(alpha, x[j], yp, ye[j], w2, b2, w1, b1)
-            if i%100 == 0 and j == 1:
+            if i%20 == 0 and j == 1:
                 ls.append(loss(yp, ye[j]))
-                print("Loss", ls[list_index])
+                print("Epoch:",i," Loss:", ls[list_index])
                 list_index += 1
-    return w2,b2,w1,b1,ls
+    return w2,b2,w1,b1,ls,ac
 #%%
 #Run the following:
 np.random.seed(seed=65)
-w2,b2,w1,b1,J = perceptron(X, Y_exp,epoch = 2000)
+w2,b2,w1,b1,J,ac = perceptron(X, Y_exp,epoch = 400)
 print("optimized weight[2,1] = ",w2,w1," and bias[2,1] = ",b2,b1)
-plt.plot(J, color='red',linewidth=1)
-plt.xlabel('Epoch')
+plt.plot(J, color='red',linewidth=1,label = "Loss")
+plt.plot(ac, color='gray',linewidth=1,label = "Accuracy")
+plt.xlabel('Epoch x20')
 plt.ylabel('Loss')
 plt.title('(Swish->Sigmoid)')
 plt.show()
-print(X,"\n-o->\n",np.around(fprop(X,w2,b2,w1,b1)),"\n?=\n",Y_exp)
-tt=np.around(fprop(X,w2,b2,w1,b1))
-for i in range(len(X)):
-    tt[i] = tt[i]==Y_exp[i]
+print("\nTesting:")
+Xt = np.random.rand(100)*400
+Yt = np.zeros((Xt.shape))
+for i in range(len(Xt)):
+    Yt[i] = Xt[i]>200
+print("\nTest Set:\n",Xt,"\nPrediction:\n",np.around(fprop(norm_input(Xt),w2,b2,w1,b1)),"\nExpectation:\n",Yt)
+tt=np.around(fprop(norm_input(Xt),w2,b2,w1,b1))
+for i in range(len(Xt)):
+    tt[i] = tt[i]==Yt[i]
 print(tt)
-print("Accuracy=", np.mean(tt))
-# Expected output for seed=65, epoch = 2000 -> Accuracy= 0.9615384615384616
+print("Test Accuracy=", np.mean(tt))
+# Expected output for seed=65, epoch = 400 -> Test accuracy ≈ 1.0
 #%%
 '''
 If everything works as expected, you should get something like this:
-Loss [0.43256865]
-Loss [0.27795202]
-Loss [0.24842286]
-Loss [0.24105851]
-Loss [0.2386457]
-Loss [0.23738767]
-Loss [0.23638189]
-Loss [0.23541746]
-Loss [0.23444735]
-Loss [0.23346188]
-Loss [0.23245947]
-Loss [0.23144021]
-Loss [0.23040453]
-Loss [0.22935289]
-Loss [0.22828577]
-optimized weight[2,1] =  [-0.45552109] [-1.02521568]  and bias[2,1] =  [-0.02756795] [0.06054726]
-[0.15330087 0.16345937 0.17546486 0.16438286 0.13667789 0.14683638
- 0.19762884 0.15237737 0.17177086 0.18100585 0.15514787 0.15791837
- 0.20039934 0.17657675 0.20501683 0.19670534 0.25488579 0.19670534
- 0.17823535 0.19578184 0.21148133 0.19855234 0.2401098  0.2382628
- 0.2456508  0.30567825] 
--o->
- [0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1] 
-?=
- [0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1]
- [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
-Accuracy= 1.0
+Epoch: 0  Loss: [0.26148347]
+Epoch: 20  Loss: [0.20311161]
+...
+Epoch: 360  Loss: [2.47054208e-05]
+Epoch: 380  Loss: [1.7035298e-05]
+optimized weight[2,1] =  [-4.68616377] [-4.34582901]  and bias[2,1] =  [2.33193864] [2.9072655]
+
+Testing:
+
+Test Set:
+ [121.35055235  65.180089   279.72550129 308.60433267 205.82097905
+  94.32275525  92.01585064 202.28606654  53.67398519 224.58490519
+ ...
+ 391.87359994 202.83060501 318.4418724  160.97708227  69.98939625
+ 262.00612419 104.73410931 152.34305253 255.62472255 342.85440107] 
+Prediction:
+ [0. 0. 1. 1. 1. 0. 0. 1. 0. 1. 0. 1. 1. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0.
+ 0. 1. 1. 1. 1. 0. 0. 0. 0. 1. 1. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 1. 0. 0.
+ 1. 1. 0. 1. 1. 0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0. 1. 0.
+ 1. 0. 1. 1. 1. 0. 1. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 0. 1.
+ 0. 0. 1. 1.] 
+Expectation:
+ [0. 0. 1. 1. 1. 0. 0. 1. 0. 1. 0. 1. 1. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0.
+ 0. 1. 1. 1. 1. 0. 0. 0. 0. 1. 1. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 1. 0. 0.
+ 1. 1. 0. 1. 1. 0. 1. 0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 0. 1. 0. 0. 1. 0.
+ 1. 0. 1. 1. 1. 0. 1. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 0. 1.
+ 0. 0. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1.]
+Test Accuracy= 1.0
 
 Your accuracy might be very different depending on the random initializations. 
 If accuracy is very bad, try running the code again and perhapse use random seed to have more control over the rand initializations.
