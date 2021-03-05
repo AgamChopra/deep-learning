@@ -12,7 +12,7 @@ This repo is a collection of all my publicly available Deep Learning projects. P
 
 * [Intro to Deep Learning](https://github.com/AgamChopra/deep-learning/tree/master/Intro%20to%20Deep%20Learning/) Series of lectures, derivations, code, and other useful materials to get an in-depth and hands-on understanding of parametric nonlinear models such as Deep Learning.
 
-  ![L1 F1](https://github.com/AgamChopra/deep-learning/blob/master/Intro%20to%20Deep%20Learning/01_The%20Perceptron/images/Figure%201.1.png?raw=true)
+  ![L1 F1](https://github.com/AgamChopra/deep-learning/blob/master/Intro%20to%20Deep%20Learning/01_Lecture_1_Intro_to_Deep_Learning/images/Figure%201.1.png)
 
 * [Fully Convolutional Neural Network for Embryo Classification](https://github.com/AgamChopra/deep-learning/tree/master/Embryo%20Classification) The goal of this project is to correctly classify embryo viability based on a 2D microscope image of the embryo.
 
