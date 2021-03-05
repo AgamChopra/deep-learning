@@ -16,13 +16,17 @@ from matplotlib import pyplot as plt
 
 #%%
 #Define the hyperparameters
-alpha = 0.001 #learning rate. Dont worry aboput this for now.
+alpha = 0.0008 #learning rate. Dont worry aboput this for now.
 eta = 1E-9 #very small value constant. Dont worry aboput this for now.
 
 #Define the inputs and ground truth values(expected outputs)
-X = np.array((1,0)) # input
-Y_exp = np.array((0,1)) # expected output
-
+X = np.random.rand(1000)*400 # input
+Y_exp = np.zeros((X.shape))
+for i in range(len(X)):
+    Y_exp[i] = X[i]>200 # expected output
+def norm_input(X):
+    X = (X-np.min(X))/(np.max(X)-np.min(X))
+    return X
 #initialize the parameters
 def percp_parm():
     w = np.random.randn((1)) #initialize weight value of perseptron to some random value. Dont worry about this for now.
@@ -78,6 +82,7 @@ def perceptron(x,ye,epoch=100):
     #print("w initial ",w.shape,"b initial ",b.shape)
     ls = []
     list_index = 0
+    x=norm_input(x)
     for i in range(epoch):#loop to minimize J.
         for j in range(len(x)):#in future, we will use mini batches and vectorization properties of numpy
             yp = fprop(x[j], w, b)#the forward step to calculate the output
@@ -85,9 +90,9 @@ def perceptron(x,ye,epoch=100):
             w,b = bprop(alpha, x[j], yp, ye[j], w, b)#update the parameters.
             #print("w after ",w.shape,"b after ",b.shape)
             #loss calculation for visualization. Dont worry about the next 3 lines
-            if i%10000 == 0 and j == 1:
+            if i%20 == 0 and j == 1:
                 ls.append(loss(yp, ye[j]))
-                print("Loss", ls[list_index])
+                print("Epoch:",i," Loss:", ls[list_index])
                 list_index += 1
     return w,b,ls
 #%%
@@ -100,32 +105,28 @@ def perceptron(x,ye,epoch=100):
 #[0.00908715]
 #[0.00857715]
 #optimized weight =  [-4.58871226]  and bias =  [2.17494229]
-w,b,J = perceptron(X, Y_exp,epoch = 100000)
+np.random.seed(seed=65)
+w,b,J = perceptron(X, Y_exp,epoch = 400)
 print("optimized weight = ",w," and bias = ",b)
 #%%
 #testing the solution
 #here, as long as our model returns a value larger than 0.5, we say that the prediction is 1 and vice versa.
-print("if x = 0 then y_pred = ",np.around(fprop(0, w, b))," with value",fprop(0, w, b)," at threshold 0.5")
-print("if x = 1 then y_pred = ",np.around(fprop(1, w, b))," with value",fprop(1, w, b)," at threshold 0.5")
-plt.plot(J, color='red',linewidth=1)
-plt.xlabel('Epoch(x10,000)')
+plt.plot(J, color='red',linewidth=1,label = "Loss")
+plt.xlabel('Epoch x20')
 plt.ylabel('Loss')
-plt.title('Loss of Binary I/O Perceptron during training')
+plt.title('(Sigmoid)')
 plt.show()
-#%%
-#pre-trained model parameters and loss for visualization.
-ws,bs = [-5.39722823,2.58551185] #saved weights
-print("saved weight = ",w," and bias = ",b)
-print("if x = 0 then y_pred = ",np.around(fprop(0, ws, bs))," with value",fprop(0, ws, bs)," at threshold 0.5")
-print("if x = 1 then y_pred = ",np.around(fprop(1, ws, bs))," with value",fprop(1, ws, bs)," at threshold 0.5")
-y = np.array((0.25014776,0.07788755,0.03378257,0.02048394,0.01442323,0.01102979,0.00888375,0.00741332,0.00634711,0.00554078))
-x =  np.array((0,10000,20000,30000,40000,50000,60000,70000,80000,90000))
-plt.plot(x, y, color='red', marker='o', linestyle='dashed',linewidth=1, markersize=4, label='output w=-5.39722823 ,b=2.58551185')
-plt.xlabel('Epoch')
-plt.ylabel('Loss (MSE)')
-plt.title('Loss of Binary I/O Perceptron during training')
-plt.legend()
-plt.show()
+print("\nTesting:")
+Xt = np.random.rand(100)*400
+Yt = np.zeros((Xt.shape))
+for i in range(len(Xt)):
+    Yt[i] = Xt[i]>200
+print("\nTest Set:\n",Xt,"\nPrediction:\n",np.around(fprop(norm_input(Xt),w,b)),"\nExpectation:\n",Yt)
+tt=np.around(fprop(norm_input(Xt),w,b))
+for i in range(len(Xt)):
+    tt[i] = tt[i]==Yt[i]
+print(tt)
+print("Test Accuracy=", np.mean(tt))
 #I really hope that this introduction was informative and fun!
 #Hope you're as excited as me to work on much more complex problems in future tutorials! :)
 #Have a nice day and see you soon!

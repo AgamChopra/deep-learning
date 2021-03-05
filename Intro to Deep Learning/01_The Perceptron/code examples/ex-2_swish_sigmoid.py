@@ -32,6 +32,9 @@ def sigmoid(x):
 
 def swish(x, b=1):
     return b*x*sigmoid(x)
+    
+def agam(x, b=1):
+    return (b*x)/(np.exp(x/(2*np.pi))+np.exp(-2*np.pi*x))
 
 def PReLU(x,b=1):
     return(x-(((x*b)>x)*(x-b*x)))
