@@ -13,8 +13,11 @@ def init_parm(nL,nLp,m=1): #nL is # of neurons of current layer, nLp is that of 
     b = np.zeros((nL,m),dtype='float64')#m is the # of mini batches
     return (w,b)
 
+def max_norm(x):
+    return (x/np.max(x))
+
 def Activation(activation,z,b=1):
-    z = np.round(np.clip(z,clipmin,clipmax),precision)
+    #z = np.round(np.clip(z,clipmin,clipmax),precision)
     if activation == 'agam':
         return (b*z)/(np.exp(z/(2*np.pi))+np.exp(-2*np.pi*z))
     elif activation == 'PReLU':
@@ -30,7 +33,7 @@ def Activation(activation,z,b=1):
         return None
 
 def BackActivation(activation,z,b=1):
-    z = np.round(np.clip(z,clipmin,clipmax),precision)
+    #z = np.round(np.clip(z,clipmin,clipmax),precision)
     if activation == 'agam':
         return (b/(np.exp(z/(2*np.pi))+np.exp(-2*np.pi*z)))*(1-z*(((np.exp(z/(2*np.pi))-2*np.pi*np.exp(2*np.pi*z))/(2*np.pi))/((np.exp(z/(2*np.pi))+np.exp(-2*np.pi*z)))))
     elif activation == 'PReLU':
@@ -54,28 +57,30 @@ def SVM(y,aL):
     return Loss
 
 def Cost(y,aL,cost_type = 'L1'):
-    y = np.round(y,9)
-    aL = np.round(aL,9)
+    #y = np.round(y,precision)
+    #aL = np.round(aL,precision)
     if cost_type == 'cross entropy':
-        return np.round(cross_entropy(y,aL),9)#Cross Entropy Cost
+        return np.round(cross_entropy(y,aL),precision)#Cross Entropy Cost
     elif cost_type == 'L2':
-        return np.round(np.mean(np.square(y-aL))/2,9) #L2/MSE Cost
+        return np.round(np.mean(np.square(y-aL))/2,precision) #L2/MSE Cost
     elif cost_type =='SVM': # !!!!! need work !!!!
-        return np.round(SVM(y,aL),9) #SVM Cost
+        return np.round(SVM(y,aL),precision) #SVM Cost
     else:
-        return np.round(aL,np.mean(y-aL),9) #L1 Cost by default
+        return np.round(aL,np.mean(y-aL),precision) #L1 Cost by default
 
 def gradient_descent(w, b, dw, db, alpha, optimization = ''):
+    '''
     w = np.round(np.clip(w,clipmin,clipmax),precision)
     dw = np.round(np.clip(dw,clipmin,clipmax),precision)
     b = np.round(np.clip(b,clipmin,clipmax),precision)
     db = np.round(np.clip(db,clipmin,clipmax),precision)
+    '''
     if optimization == 'ADAM':
         return None #!!!needs work!!!
     else:
-        w = w - alpha*dw
-        b = b - alpha*db
-        return np.round(np.clip(w,clipmin,clipmax),precision),np.round(np.clip(b,clipmin,clipmax),precision)
+        w = np.round(w - alpha*dw,precision)
+        b = np.round(b - alpha*db,precision)
+        return w,b
 
 class Layer:
     def __init__(self,nL,nLp,activation,ac_parm = 1,batch_size = 1):#initialize the neurons for layer L
@@ -90,9 +95,9 @@ class Layer:
     def fprop(self,aLp):#forward propogate layer L. output aL = g(b+(w x aLp))
         #print("\nb\n",self.b,"\nw\n",self.w,"\naLprevious\n", aLp)
         #print("\nz before\n",self.z)
-        self.z = self.b + np.matmul(self.w, aLp) #!!!something over here is going wrong!!!
+        self.z = np.round(self.b + np.matmul(self.w, max_norm(aLp)),precision) #!!!something over here is going wrong!!!
         #print("\nz after\n",self.z,"\n")
-        self.aL = Activation(self.nonLin,self.z,self.nonLin_scale)
+        self.aL = np.round(Activation(self.nonLin,self.z,self.nonLin_scale),precision)
         #print(self.w.shape,aLp.shape, self.b.shape,self.z.shape, self.aL.shape)
         return self.aL
     
@@ -147,11 +152,11 @@ class model():
         self.L3 = Layer(nL=1, nLp=2, activation='sigmoid', ac_parm=1, batch_size =16)
         self.J = []
         
-    def run(self, x, y, t, learning_rate = 0.001):
+    def run(self, x, y, t, learning_rate = 0.001,decay = True):
         for epoch in range(t):
             #print("\nEpoch:",epoch)
             #for m in (16):
-            learning_rate_decay = learning_rate/(epoch+1)
+            learning_rate_decay = learning_rate/(epoch+1) if decay else learning_rate
             m=16   
             a1 = self.L1.fprop(x[:,(m-16):(m)])
             a2 = self.L2.fprop(a1)
@@ -163,9 +168,9 @@ class model():
             self.L3.update_parm(learning_rate_decay)
             self.L2.update_parm(learning_rate_decay)
             self.L1.update_parm(learning_rate_decay)
-            if epoch % 2499 == 0 or epoch == 0:
+            if epoch % 500 == 0 or epoch == 0:
                 self.J.append(Jeph)
-            if epoch % 4999 ==0 or epoch == 0:
+            if epoch % 10000 ==0 or epoch == 0:
                 print("Loss after",epoch,"epochs =", Jeph)
             #print("Loss =",Jeph,"\nminibatch done\n")
         return self.J
@@ -191,15 +196,15 @@ class model():
 #%%
 
 test = model(X,Y_exp)
-J = test.run(x = X, y = Y_exp, t = 100000, learning_rate = 0.01)
-#%%
+J = test.run(x = X, y = Y_exp, t = 100000, learning_rate = 0.00005, decay = True)
+
 from matplotlib import pyplot as plt
 plt.plot(J, color='red',linewidth=1,label = "ReLU in hidden layers accuracy = 0.65")
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.title('Loss after n epoches')
 plt.show()
-#%%
+
 p1,p2,p3 = test.save_model()
 print("\np3\n",p3,"\np2\n",p2,"\np1\n",p1)
 w1,b1 = p1
@@ -214,3 +219,49 @@ for i in range(16):
     print("prediction=",pred,"expectation =",[expc],"correct? ",pred == expc)
 print("accuracy =", np.round(acc/16,2))    
 #print(X,"\n\n",Activation('PReLU', X),"\n\n",BackActivation('PReLU', X))
+
+'''
+Expected Output:
+Loss after 0 epochs = 0.12301798282982934
+Loss after 10000 epochs = 0.12301730443902555
+Loss after 20000 epochs = 0.12301725650024592
+Loss after 30000 epochs = 0.12301722846369548
+Loss after 40000 epochs = 0.12301720857413406
+Loss after 50000 epochs = 0.12301719314814644
+Loss after 60000 epochs = 0.12301718054521231
+Loss after 70000 epochs = 0.12301716989029865
+Loss after 80000 epochs = 0.12301716066112423
+Loss after 90000 epochs = 0.12301715252082603
+
+***Plot of Loss***
+
+p3
+ (array([[-0.67766849, -0.14522959]]), array([-1.82216803e-05])) 
+p2
+ (array([[ 0.23042037, -2.14183247,  0.33479327],
+       [-0.16396583,  1.69118184,  1.13172029]]), array([1.23485788e-05, 2.64491190e-06])) 
+p1
+ (array([[-1.94999333,  0.92497096, -0.66503102,  2.02736426, -0.94526326,
+        -0.40290548, -0.81459324, -0.97050278,  0.1062497 ,  1.07308328],
+       [ 1.04861513, -0.14089114,  0.94461458, -1.04530694, -0.99172698,
+        -0.88043157,  0.11635186,  0.76668122,  0.36020751, -0.37237414],
+       [-0.13317734, -1.47530163,  0.75312089,  0.28024639,  0.45657272,
+        -0.65073973,  0.42099018, -0.01986466,  0.30694893,  0.80428047]]), array([ 6.53351617e-07, -9.49127110e-06,  5.14924353e-06]))
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [True] correct?  [False]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [True] correct?  [False]
+prediction= [False] expectation = [True] correct?  [False]
+prediction= [False] expectation = [True] correct?  [False]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [True] correct?  [False]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [True] correct?  [False]
+prediction= [False] expectation = [False] correct?  [ True]
+prediction= [False] expectation = [True] correct?  [False]
+accuracy = 0.56
+'''
