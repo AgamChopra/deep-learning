@@ -1,0 +1,498 @@
+....calculating metrics
+tensor([0.5147], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 4 model type Deep
+Epoch 0: train loss: 0.24701327085494995
+Epoch 2: train loss: 0.24687539041042328
+Epoch 4: train loss: 0.24684208631515503
+Epoch 6: train loss: 0.2468477487564087
+Epoch 8: train loss: 0.24685189127922058
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5586], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 5 model type Deep
+Epoch 0: train loss: 0.2537437379360199
+Epoch 2: train loss: 0.25266507267951965
+Epoch 4: train loss: 0.2517447769641876
+Epoch 6: train loss: 0.25085461139678955
+Epoch 8: train loss: 0.2499738335609436
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5098], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 6 model type Deep
+Epoch 0: train loss: 0.2624160051345825
+Epoch 2: train loss: 0.2614465653896332
+Epoch 4: train loss: 0.2606114149093628
+Epoch 6: train loss: 0.2598699629306793
+Epoch 8: train loss: 0.259018212556839
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4508], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 7 model type Deep
+Epoch 0: train loss: 0.2585570216178894
+Epoch 2: train loss: 0.25767597556114197
+Epoch 4: train loss: 0.2569975256919861
+Epoch 6: train loss: 0.25638696551322937
+Epoch 8: train loss: 0.25601378083229065
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4631], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 8 model type Deep
+Epoch 0: train loss: 0.2474484145641327
+Epoch 2: train loss: 0.24720776081085205
+Epoch 4: train loss: 0.24703292548656464
+Epoch 6: train loss: 0.24688561260700226
+Epoch 8: train loss: 0.2467963993549347
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5598], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 9 model type Deep
+Epoch 0: train loss: 0.2540295422077179
+Epoch 2: train loss: 0.2533886730670929
+Epoch 4: train loss: 0.2530992031097412
+Epoch 6: train loss: 0.2529776096343994
+Epoch 8: train loss: 0.25284138321876526
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4797], grad_fn=<DivBackward0>)
+deleting model
+done
+averaging metrics
+done
+########### {'Linear': {'accuracy': 0.5063855421686748, 'FPR': 0.5296532305127124}, 'Perceptron': {'accuracy': 0.5108433734939759, 'FPR': 0.5558172830047418}, 'Shallow': {'accuracy': 0.5034337349397591, 'FPR': 0.53093705818247}, 'Deep': {'accuracy': 0.5038554216867469, 'FPR': 0.44400509910084907}}
+Pseudo_RNN
+##cross val batch 0 model type Pseudo_RNN
+Epoch 0: train loss: 0.25139909982681274
+Epoch 2: train loss: 0.24852243065834045
+Epoch 4: train loss: 0.24706506729125977
+Epoch 6: train loss: 0.24679668247699738
+Epoch 8: train loss: 0.24714872241020203
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5838], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 1 model type Pseudo_RNN
+Epoch 0: train loss: 0.2469644695520401
+Epoch 2: train loss: 0.2469196617603302
+Epoch 4: train loss: 0.24683625996112823
+Epoch 6: train loss: 0.24685518443584442
+Epoch 8: train loss: 0.24683043360710144
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5545], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 2 model type Pseudo_RNN
+Epoch 0: train loss: 0.24732790887355804
+Epoch 2: train loss: 0.24669328331947327
+Epoch 4: train loss: 0.24690884351730347
+Epoch 6: train loss: 0.24681173264980316
+Epoch 8: train loss: 0.2466764748096466
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5660], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 3 model type Pseudo_RNN
+Epoch 0: train loss: 0.24788960814476013
+Epoch 2: train loss: 0.24678681790828705
+Epoch 4: train loss: 0.24683767557144165
+Epoch 6: train loss: 0.24703794717788696
+Epoch 8: train loss: 0.2469095140695572
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5614], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 4 model type Pseudo_RNN
+Epoch 0: train loss: 0.2679195702075958
+Epoch 2: train loss: 0.2611049711704254
+Epoch 4: train loss: 0.25560516119003296
+Epoch 6: train loss: 0.2514983117580414
+Epoch 8: train loss: 0.24876925349235535
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5336], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 5 model type Pseudo_RNN
+Epoch 0: train loss: 0.27556660771369934
+Epoch 2: train loss: 0.2675289511680603
+Epoch 4: train loss: 0.2607661187648773
+Epoch 6: train loss: 0.255376398563385
+Epoch 8: train loss: 0.25138652324676514
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5119], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 6 model type Pseudo_RNN
+Epoch 0: train loss: 0.25407394766807556
+Epoch 2: train loss: 0.2501888871192932
+Epoch 4: train loss: 0.24781812727451324
+Epoch 6: train loss: 0.24685890972614288
+Epoch 8: train loss: 0.24692481756210327
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5806], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 7 model type Pseudo_RNN
+Epoch 0: train loss: 0.2728163003921509
+Epoch 2: train loss: 0.26523837447166443
+Epoch 4: train loss: 0.2589164674282074
+Epoch 6: train loss: 0.25395363569259644
+Epoch 8: train loss: 0.25037625432014465
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5179], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 8 model type Pseudo_RNN
+Epoch 0: train loss: 0.24869531393051147
+Epoch 2: train loss: 0.24703122675418854
+Epoch 4: train loss: 0.24674974381923676
+Epoch 6: train loss: 0.2470833957195282
+Epoch 8: train loss: 0.24716462194919586
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5728], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 9 model type Pseudo_RNN
+Epoch 0: train loss: 0.24869133532047272
+Epoch 2: train loss: 0.2471364587545395
+Epoch 4: train loss: 0.24687519669532776
+Epoch 6: train loss: 0.2471838891506195
+Epoch 8: train loss: 0.24726064503192902
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5700], grad_fn=<DivBackward0>)
+deleting model
+done
+averaging metrics
+done
+########### {'Linear': {'accuracy': 0.5063855421686748, 'FPR': 0.5296532305127124}, 'Perceptron': {'accuracy': 0.5108433734939759, 'FPR': 0.5558172830047418}, 'Shallow': {'accuracy': 0.5034337349397591, 'FPR': 0.53093705818247}, 'Deep': {'accuracy': 0.5038554216867469, 'FPR': 0.44400509910084907}, 'Pseudo_RNN': {'accuracy': 0.49650602409638556, 'FPR': 0.4228591423573846}}
+RNN
+##cross val batch 0 model type RNN
+Epoch 0: train loss: 0.2669393718242645
+Epoch 2: train loss: 0.2665111720561981
+Epoch 4: train loss: 0.2660859227180481
+Epoch 6: train loss: 0.26566627621650696
+Epoch 8: train loss: 0.2652493119239807
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4218], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 1 model type RNN
+Epoch 0: train loss: 0.24885720014572144
+Epoch 2: train loss: 0.24871215224266052
+Epoch 4: train loss: 0.24857239425182343
+Epoch 6: train loss: 0.24843712151050568
+Epoch 8: train loss: 0.24830883741378784
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5200], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 2 model type RNN
+Epoch 0: train loss: 0.28291165828704834
+Epoch 2: train loss: 0.2824181020259857
+Epoch 4: train loss: 0.28192824125289917
+Epoch 6: train loss: 0.2814442217350006
+Epoch 8: train loss: 0.2809646725654602
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.3730], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 3 model type RNN
+Epoch 0: train loss: 0.24720826745033264
+Epoch 2: train loss: 0.24715739488601685
+Epoch 4: train loss: 0.24710988998413086
+Epoch 6: train loss: 0.2470678985118866
+Epoch 8: train loss: 0.24702851474285126
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5442], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 4 model type RNN
+Epoch 0: train loss: 0.26181674003601074
+Epoch 2: train loss: 0.2613967955112457
+Epoch 4: train loss: 0.260983407497406
+Epoch 6: train loss: 0.2605760395526886
+Epoch 8: train loss: 0.26017507910728455
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4424], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 5 model type RNN
+Epoch 0: train loss: 0.26305314898490906
+Epoch 2: train loss: 0.2627362012863159
+Epoch 4: train loss: 0.26242172718048096
+Epoch 6: train loss: 0.26211023330688477
+Epoch 8: train loss: 0.2618015706539154
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4357], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 6 model type RNN
+Epoch 0: train loss: 0.26466426253318787
+Epoch 2: train loss: 0.26443618535995483
+Epoch 4: train loss: 0.2642114758491516
+Epoch 6: train loss: 0.2639881372451782
+Epoch 8: train loss: 0.26376786828041077
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4275], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 7 model type RNN
+Epoch 0: train loss: 0.24944338202476501
+Epoch 2: train loss: 0.24935480952262878
+Epoch 4: train loss: 0.24926626682281494
+Epoch 6: train loss: 0.2491803914308548
+Epoch 8: train loss: 0.2490948587656021
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5093], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 8 model type RNN
+Epoch 0: train loss: 0.24692261219024658
+Epoch 2: train loss: 0.24689064919948578
+Epoch 4: train loss: 0.2468632459640503
+Epoch 6: train loss: 0.2468419224023819
+Epoch 8: train loss: 0.24682343006134033
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5520], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 9 model type RNN
+Epoch 0: train loss: 0.24726121127605438
+Epoch 2: train loss: 0.2472149133682251
+Epoch 4: train loss: 0.24717123806476593
+Epoch 6: train loss: 0.24713122844696045
+Epoch 8: train loss: 0.24709346890449524
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5701], grad_fn=<DivBackward0>)
+deleting model
+done
+averaging metrics
+done
+########### {'Linear': {'accuracy': 0.5063855421686748, 'FPR': 0.5296532305127124}, 'Perceptron': {'accuracy': 0.5108433734939759, 'FPR': 0.5558172830047418}, 'Shallow': {'accuracy': 0.5034337349397591, 'FPR': 0.53093705818247}, 'Deep': {'accuracy': 0.5038554216867469, 'FPR': 0.44400509910084907}, 'Pseudo_RNN': {'accuracy': 0.49650602409638556, 'FPR': 0.4228591423573846}, 'RNN': {'accuracy': 0.49066265060240954, 'FPR': 0.4521570693424352}}
+CNN
+##cross val batch 0 model type CNN
+Epoch 0: train loss: 0.2709115743637085
+Epoch 2: train loss: 0.2696154713630676
+Epoch 4: train loss: 0.26864129304885864
+Epoch 6: train loss: 0.2679320275783539
+Epoch 8: train loss: 0.26717114448547363
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4420], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 1 model type CNN
+Epoch 0: train loss: 0.24826256930828094
+Epoch 2: train loss: 0.24727848172187805
+Epoch 4: train loss: 0.2467394471168518
+Epoch 6: train loss: 0.246316596865654
+Epoch 8: train loss: 0.2459232658147812
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5374], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 2 model type CNN
+Epoch 0: train loss: 0.24835677444934845
+Epoch 2: train loss: 0.24796253442764282
+Epoch 4: train loss: 0.2475585788488388
+Epoch 6: train loss: 0.24719125032424927
+Epoch 8: train loss: 0.2468688040971756
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.5822], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 3 model type CNN
+Epoch 0: train loss: 0.25531116127967834
+Epoch 2: train loss: 0.2536962926387787
+Epoch 4: train loss: 0.25289416313171387
+Epoch 6: train loss: 0.2523600459098816
+Epoch 8: train loss: 0.2518197298049927
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4482], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 4 model type CNN
+Epoch 0: train loss: 0.2516888976097107
+Epoch 2: train loss: 0.24989184737205505
+Epoch 4: train loss: 0.24938581883907318
+Epoch 6: train loss: 0.2489495575428009
+Epoch 8: train loss: 0.24848632514476776
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4915], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 5 model type CNN
+Epoch 0: train loss: 0.25520816445350647
+Epoch 2: train loss: 0.25348445773124695
+Epoch 4: train loss: 0.25234562158584595
+Epoch 6: train loss: 0.25098147988319397
+Epoch 8: train loss: 0.25004133582115173
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4749], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 6 model type CNN
+Epoch 0: train loss: 0.25588271021842957
+Epoch 2: train loss: 0.25480714440345764
+Epoch 4: train loss: 0.25394314527511597
+Epoch 6: train loss: 0.25309479236602783
+Epoch 8: train loss: 0.2523326873779297
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4692], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 7 model type CNN
+Epoch 0: train loss: 0.26294559240341187
+Epoch 2: train loss: 0.26023679971694946
+Epoch 4: train loss: 0.2587420344352722
+Epoch 6: train loss: 0.2580145299434662
+Epoch 8: train loss: 0.2570006251335144
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4558], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 8 model type CNN
+Epoch 0: train loss: 0.2775422930717468
+Epoch 2: train loss: 0.27570250630378723
+Epoch 4: train loss: 0.27444547414779663
+Epoch 6: train loss: 0.2735758423805237
+Epoch 8: train loss: 0.2727336883544922
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4170], grad_fn=<DivBackward0>)
+deleting model
+done
+##cross val batch 9 model type CNN
+Epoch 0: train loss: 0.26571670174598694
+Epoch 2: train loss: 0.26487159729003906
+Epoch 4: train loss: 0.2634391188621521
+Epoch 6: train loss: 0.2613634169101715
+Epoch 8: train loss: 0.2602955102920532
+y_pred
+torch.Size([1660, 1]) (1660, 1)
+calculating metrics
+tensor([0.4304], grad_fn=<DivBackward0>)
+deleting model
+done
+averaging metrics
+done
+########### {'Linear': {'accuracy': 0.5063855421686748, 'FPR': 0.5296532305127124}, 'Perceptron': {'accuracy': 0.5108433734939759, 'FPR': 0.5558172830047418}, 'Shallow': {'accuracy': 0.5034337349397591, 'FPR': 0.53093705818247}, 'Deep': {'accuracy': 0.5038554216867469, 'FPR': 0.44400509910084907}, 'Pseudo_RNN': {'accuracy': 0.49650602409638556, 'FPR': 0.4228591423573846}, 'RNN': {'accuracy': 0.49066265060240954, 'FPR': 0.4521570693424352}, 'CNN': {'accuracy': 0.5086746987951807, 'FPR': 0.43937015831939064}}
+[{'Linear': {'accuracy': 0.5063855421686748, 'FPR': 0.5296532305127124}, 'Perceptron': {'accuracy': 0.5108433734939759, 'FPR': 0.5558172830047418}, 'Shallow': {'accuracy': 0.5034337349397591, 'FPR': 0.53093705818247}, 'Deep': {'accuracy': 0.5038554216867469, 'FPR': 0.44400509910084907}, 'Pseudo_RNN': {'accuracy': 0.49650602409638556, 'FPR': 0.4228591423573846}, 'RNN': {'accuracy': 0.49066265060240954, 'FPR': 0.4521570693424352}, 'CNN': {'accuracy': 0.5086746987951807, 'FPR': 0.43937015831939064}}]
+1
+##Cross-Validation Results##
+_________ Linear 
+accuracy: 0.506 , fpr: 0.53 
+____________________________
+_________ Perceptron 
+accuracy: 0.511 , fpr: 0.556 
+____________________________
+_________ Shallow 
+accuracy: 0.503 , fpr: 0.531 
+____________________________
+_________ Deep 
+accuracy: 0.504 , fpr: 0.444 
+____________________________
+_________ Pseudo_RNN 
+accuracy: 0.497 , fpr: 0.423 
+____________________________
+_________ RNN 
+accuracy: 0.491 , fpr: 0.452 
+____________________________
+_________ CNN 
+accuracy: 0.509 , fpr: 0.439 
+____________________________
+### Training  CNN ###
+Epoch 0: train loss: 0.2513481378555298
+## Estimated time left: 10 min(s) 1 second(s) ##
+Epoch 100: train loss: 0.24544019997119904
+## Estimated time left: 9 min(s) 1 second(s) ##
+Epoch 200: train loss: 0.24368754029273987
+## Estimated time left: 8 min(s) 1 second(s) ##
+Epoch 300: train loss: 0.24294313788414001
+## Estimated time left: 7 min(s) 1 second(s) ##
+Epoch 400: train loss: 0.24240906536579132
+## Estimated time left: 6 min(s) 1 second(s) ##
+Epoch 500: train loss: 0.24194161593914032
+## Estimated time left: 5 min(s) 1 second(s) ##
+Epoch 600: train loss: 0.2413281947374344
+## Estimated time left: 4 min(s) 1 second(s) ##
+Epoch 700: train loss: 0.24081048369407654
+## Estimated time left: 3 min(s) 1 second(s) ##
+Epoch 800: train loss: 0.2403630018234253
+## Estimated time left: 2 min(s) 1 second(s) ##
+Epoch 900: train loss: 0.23997913300991058
+## Estimated time left: 1 min(s) 1 second(s) ##
+y_pred
+Complete!
